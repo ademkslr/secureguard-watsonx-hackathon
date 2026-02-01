@@ -1,0 +1,44 @@
+openapi: 3.0.1
+info:
+  title: Cloudant Writer Final
+  description: Official Writer Connection
+  version: 1.0.0
+servers:
+  - url: https://94aab3f3-02d0-44e9-8655-88c46b6bc1a4-bluemix.cloudantnosqldb.appdomain.cloud
+paths:
+  /compliance_audit_log:
+    post:
+      operationId: log_violation
+      summary: Log Violation
+      security:
+        - BearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                risk_level:
+                  type: string
+                user_message:
+                  type: string
+                detected_types:
+                   type: string
+                user:
+                   type: string
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+components:
+  securitySchemes:
+    BearerAuth:
+      type: apiKey
+      in: header
+      name: Authorization
