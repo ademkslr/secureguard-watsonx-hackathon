@@ -7,12 +7,12 @@ SecureGuard is an agentic AI solution designed to prevent data leakage in bankin
 
 ## 🚀 Key Features
 * **Real-time Intent Analysis:** Detects risky behavior (e.g., sharing IBANs or PII) using LLM reasoning.
-* **RAG (Retrieval Augmented Generation):** Answers policy questions based on the "2024 Bank Policy" PDF.
+* **RAG (Retrieval Augmented Generation):** Answers policy questions based on the "2026 Bank Policy" PDF.
 * **Automated Auditing:** Uses custom Tool-Calling to log security violations directly into an **IBM Cloudant** NoSQL database.
 
 ## 🛠️ Technology Stack
 * **Platform:** IBM watsonx Orchestrate
-* **Model:** Llama 3 (via watsonx.ai)
+* **Model:** GPT OSS-120B
 * **Integration:** Slack (Frontend), IBM Cloudant (Backend Database)
 * **Tools:** Custom OpenAPI Extension for database logging
 
